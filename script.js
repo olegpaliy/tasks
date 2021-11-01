@@ -878,3 +878,4 @@
 //   return {...acc, [`number${cur}`]:cur}
 // },{})
 // console.log(res)
+
