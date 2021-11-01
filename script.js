@@ -879,3 +879,15 @@
 // },{})
 // console.log(res)
 
+
+
+
+// дано масив [4,6,2,3,7,8] сформувати такий об'єкт {'4+6+2+3+7+9': 15}
+
+const getObjSum = (arr) => {
+  const res = arr.reduce((acc, cur) => {
+    return { ...acc, [`${cur} +${cur}`] : cur}
+  }, {})
+  return res
+}
+console.log(getObjSum([4, 6, 2, 3, 7, 8]))
