@@ -881,14 +881,11 @@
 
 // дано масив [4,6,2,3,7,8] сформувати такий об'єкт {'4+6+2+3+7+9': 15}
 
-const getObjSum = (arr) => {
-  const res = arr.reduce((acc, cur, index) => {
-    console.log(cur)
-    return { [`${acc.Object.keys()+cur + '+'}`]: cur }
-  }, {})
-  return res
-}
-console.log(getObjSum([4, 6, 2, 3, 7, 8]))
+const getObjSum = (arr) => arr.reduce((acc, cur, index) => {
+  const strField = Object.keys(acc)[0];
+  return { [!index ? cur : `${strField} + ${cur}`]: acc[strField] ? acc[strField] + cur : cur }
+}, {})
+console.log(getObjSum([4, 6, 2, 3, 7, 8, 9]))
 
 // const arr = [4, 6, 2, 3, 7, 8];
 // let sum = 0;
