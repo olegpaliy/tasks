@@ -5,11 +5,12 @@
 
 // // for(let i = 0; i < arr.length; i++) {
 // //     console.log(i)
-// // }
+// // } 
 // // let flat = arr.join().split(',');
-// // console.log(flat)
+// // console.log(flat)    
 
 // let result = arr.reduce((finalArr, curent) => {
+
 
 //     if (Array.isArray(curent)) {
 //        finalArr = [...finalArr, ...curent]
@@ -22,7 +23,10 @@
 // }, [])
 // console.log(result)
 
+
+
 // let sum = Number(nums[0]) + Number(nums[1]) + Number(nums[2])
+
 
 // const friends = [
 // { passport: '03005988', name: 'Joseph Francis Tribbiani Jr', age: 32, sex: 'm' },
@@ -142,7 +146,8 @@
 // .map(person => ({...person, Lover: Ksenia}))
 // console.log(addKsenia);
 
-// Дана строка из 6-ти цифр. Проверьте, что сумма первых трех цифр равняется сумме вторых трех цифр. Если это так - выведите 'да', в противном случае выведите 'нет'.
+// Дана строка из 6-ти цифр. Проверьте, что сумма первых трех цифр равняется сумме вторых трех цифр. Если это так - выведите 'да', в противном случае выведите 'нет'. 
+
 
 // let nums = "123";
 
@@ -185,11 +190,13 @@
 // console.log(numsSplit)
 // console.log(getSum(arr1))
 
+
 // let sum = 0;
 // for (i = 0; i <= 100; i++) {
 //     sum += i
 // }
 // console.log(sum)
+
 
 // const arr = '765432345654dsd32';
 // const arrSplit = arr.split('')
@@ -197,6 +204,8 @@
 // .filter(cur => cur % 2 === 0).length;
 
 // console.log(arrSplit)
+
+
 
 // const arr = [1, 2, 3, 4, 5];
 // let sum = 0;
@@ -212,7 +221,8 @@
 //     if (key === 'коля') {
 //         console.log(`${key} - зарплата ${obj[key]} $`)
 //     }
-// }
+// } 
+
 
 // const inputValue = "123";
 // const parseSec = (arg) => {
@@ -268,6 +278,7 @@
 // })
 // console.log(result)
 
+
 // const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 // for (i = 0; i < nums.length; i++) {
 //     console.log()
@@ -291,10 +302,11 @@
 // }
 // // console.log(sum(3,5))
 // const numb = +prompt('номер дня тижня')
-// const
+// const 
 // const sum = (numb) => {
-//     return
+//     return 
 // }
+
 
 // const getDigitsSum = (num) => (num).toString().split('').reduce((acc, cur) => acc + +cur, 0);
 //     const strNum = (num).toString();
@@ -315,6 +327,8 @@
 // }, [])
 // console.log(result)
 
+
+
 // const arr = [1, 2, 54, 4, 5];
 // const res = arr.reduce((acc, cur, index) => {
 //     if (index === 2) {
@@ -327,9 +341,9 @@
 // const getDivisors = (num) => [...Array(num).keys()].reduce((acc, cur) => num % cur === 0 ? [...acc, cur] : acc ,[])
 // console.log(getDivisors(1488))
 
-// Сделайте функцию isEven() (even - это четный), которая параметром принимает целое число и проверяет: четное оно или нет. Если четное - пусть функция возвращает true, если нечетное - false.
+// Сделайте функцию isEven() (even - это четный), которая параметром принимает целое число и проверяет: четное оно или нет. Если четное - пусть функция возвращает true, если нечетное - false. 
 
-// Дан массив с целыми числами. Создайте из него новый массив, где останутся лежать только четные из этих чисел. Для этого используйте вспомогательную функцию isEven из предыдущей задачи.
+// Дан массив с целыми числами. Создайте из него новый массив, где останутся лежать только четные из этих чисел. Для этого используйте вспомогательную функцию isEven из предыдущей задачи. 
 
 // const isEven = (num) => num % 2 === 0;
 // console.log(isEven(18))
@@ -342,6 +356,7 @@
 // const str1 = 'petka, ivan, vitalik';
 // const ucfirst = (str2) => str2.split(', ').map(person => `${person[0].toUpperCase()}${person.slice(1)}`).join(', ');
 // console.log(ucfirst(str1));
+
 
 // Дана строка вида 'var_text_hello'. Сделайте из него текст 'varTextHello'.
 
@@ -361,6 +376,8 @@
 // };
 // console.log(inArray("dfefrtgt", ["dsds", "dfefrtgt123", "tytyt"]));
 
+
+
 // Дана строка, например, '123456'. Сделайте из нее '214365'.
 
 // const str = "123456";
@@ -373,6 +390,8 @@
 // const midNum = (arr) => arr.reduce((acc, cur) => acc + cur, 0) / 2;
 
 // console.log(midNum(([1,2,4,5,6,7,7,0,-1])))
+
+
 
 // const getDigitsSum = (num) => (num).toString().split('').reduce((acc, cur) => acc + +cur, 0);
 
@@ -388,30 +407,33 @@
 // const result = arr1.filter(numb => {
 //     const res = arr(numb)
 //     return res > 1 && res < 9
-// })
+// }) 
 // console.log(result)
 
+
 /**
- * Описание задачи: Напишите функцию, которая очищает массив от нежелательных значений, таких как false, undefined, пустые строки, ноль, null.
- * Ожидаемый результат: [0, 1, false, 2, undefined, '', 3, null] => [1, 2, 3]
- * Сложность задачи: 1 of 5
- * @param {Array} array - Массив любых элементов
- * @returns {Array}
- */
+  * Описание задачи: Напишите функцию, которая очищает массив от нежелательных значений, таких как false, undefined, пустые строки, ноль, null.
+  * Ожидаемый результат: [0, 1, false, 2, undefined, '', 3, null] => [1, 2, 3]
+  * Сложность задачи: 1 of 5
+  * @param {Array} array - Массив любых элементов
+  * @returns {Array}
+*/
 
 // const data = [0, 1, false, 2, undefined, '', 3, null];
 // const compact = (array) => array.filter(item => !!item)
 //    console.log(compact(data))
 
+
 /**
- * Описание задачи: Напишите функцию, которая возвращает объект, составленный из значений вложенных массивов. Первое значение - ключ, второе - зачение.
- * Ожидаемый результат: [['a', 1], ['b', 2]] => { a: 1, b: 2 }
- * Сложность задачи: 2 of 5
- * @param {Array} array - массив, значения которого массивы пар
- * @returns {Array}
- */
+  * Описание задачи: Напишите функцию, которая возвращает объект, составленный из значений вложенных массивов. Первое значение - ключ, второе - зачение.
+  * Ожидаемый результат: [['a', 1], ['b', 2]] => { a: 1, b: 2 }
+  * Сложность задачи: 2 of 5
+  * @param {Array} array - массив, значения которого массивы пар
+  * @returns {Array}
+*/
 
 // let result = arr.reduce((finalArr, curent) => {
+
 
 //     if (Array.isArray(curent)) {
 //        finalArr = [...finalArr, ...curent]
@@ -424,15 +446,19 @@
 // }, [])
 // console.log(result)
 
+
 // const data = [['a', 1], ['b', 2]];
 
 // const fromPairs = (array) => array.reduce((acc, cur) => {
 //   const [key, value] = cur;
-//   acc[key] = value
+//   acc[key] = value 
 //   return acc
 // }, {} )
 
-//  console.log(fromPairs(data))
+//  console.log(fromPairs(data)) 
+
+
+
 
 //  const key = 'age'
 //  const value = 26
@@ -459,6 +485,7 @@
 //   * @param {Array} firstArray - Массив с примитивными значениями
 //   * @param {Array} secondArray - Массив с примитивными значениями
 //   * @returns {boolean}
+
 
 // const isEqual = (firstArray, secondArray) => {
 //   if (firstArray.length === secondArray.length) {
@@ -564,10 +591,11 @@
 // obj = false
 // // console.log(obj2.method1().method2().method3())
 
+
 // city1.exportStr()
 // city2.exportStr()
 
-// let d1 = [45, 78, 10, 3];
+// let d1 = [45, 78, 10, 3]; 
 // d1[7]=100;
 // d1[6]
 
@@ -587,9 +615,10 @@
 // }
 // console.log(sum)
 
-// 2. Створіть обєкт який має у собі 2 довжини сторін фігури.
-// Додайте методи які будуть робити наступне - рахувати площу фігури,
-// периметр фігури, зроблять фігуру 3-д, зададуть назву фігури,
+
+// 2. Створіть обєкт який має у собі 2 довжини сторін фігури. 
+// Додайте методи які будуть робити наступне - рахувати площу фігури, 
+// периметр фігури, зроблять фігуру 3-д, зададуть назву фігури, 
 // переведуть значення з сантиметрів у метри.
 
 // const obj = {
@@ -607,7 +636,7 @@
 //   },
 //   nameFigure() {
 //     obj['name'] = 'qwerty';
-//     // console.log(obj)
+//     // console.log(obj)   
 //   },
 //   changeValue() {
 //     console.log(this.side1/100)
@@ -633,6 +662,8 @@
 //   } , ...
 
 // }
+
+
 
 // const shopingList = {
 //   tomato: {
@@ -671,7 +702,7 @@
 //   }
 // };
 
-//  Виводимо список покупок - спочатку ті які є в магазині потім яких немає,
+//  Виводимо список покупок - спочатку ті які є в магазині потім яких немає, 
 // Виводимо список покупок які ми купили.
 // Додаємо функцію яка дозволить купити продукт.
 // Додаємо функцію яка просумує всі зроблені покупки і виведе результат.(не забуваємо що є значення кількості та ціни за одиницю товару)
@@ -740,6 +771,7 @@
 
 // Из двух случайных чисел, одно из которых четное, а другое нечетное, определить и вывести на экран нечетное число.
 
+
 // const getNumber = (numb1, numb2) => {
 //   if (numb1 % 2 !== 0) {
 //     return numb1
@@ -761,6 +793,8 @@
 //   return strNumbs
 // }
 // console.log(getSum(34560))
+
+
 
 // Введите последнее число последовательности: 200
 // Сумма чисел делящихся на 5 из последовательности [0, 200] равна 4100
@@ -784,6 +818,7 @@
 // }, {})
 // console.log(res)
 
+
 //  написати функцію, яка прийме об'єкт і поверне масив з двох об'єктів з одниковими типами значень:
 // [{name: 'Oleg', surrName: 'Paliy'}, {age: 25, height: 180s}]
 // const obj = {
@@ -792,6 +827,7 @@
 //   surrName: 'Paliy',
 //   height: 180
 // };
+
 
 // const getAray = (obj) => {
 //   let arrObj = Object.keys(obj).reduce((acc, cur) => {
@@ -845,11 +881,11 @@
 
 // дано масив [4,6,2,3,7,8] сформувати такий об'єкт {'4+6+2+3+7+9': 15}
 
-const getObjSum = (arr) => arr.reduce((acc, cur, index) => {
-  const strField = Object.keys(acc)[0];
-  return { [!index ? cur : `${strField} + ${cur}`]: acc[strField] ? acc[strField] + cur : cur }
-}, {})
-console.log(getObjSum([4, 6, 2, 3, 7, 8, 9]))
+// const getObjSum = (arr) => arr.reduce((acc, cur, index) => {
+//   const strField = Object.keys(acc)[0];
+//   return { [!index ? cur : `${strField} + ${cur}`]: acc[strField] ? acc[strField] + cur : cur }
+// }, {})
+// console.log(getObjSum([4, 6, 2, 3, 7, 8, 9]))
 
 // const arr = [4, 6, 2, 3, 7, 8];
 // let sum = 0;
@@ -862,3 +898,49 @@ console.log(getObjSum([4, 6, 2, 3, 7, 8, 9]))
 // str = str.substring(0, str.length - 1);
 // obj[str] = sum
 // console.log(obj)
+
+const arr = [2, 10, 5, 7, 8, 4, 1, 0, -1,100]
+let maxNum = arr[0]
+let minNum = arr[0]
+let maxIdx;
+let minIdx;
+for (i = 0; i < arr.length; i++) {
+  if (maxNum < arr[i]) {
+    maxNum = arr[i] // 2,10,100
+    maxIdx = i
+    //0,1,9
+  }
+}
+for (i = 0; i < arr.length; i++) {
+  if (minNum >= arr[i]) {
+    minNum = arr[i] //2, 1,0, -1
+    minIdx = i
+
+  }
+}
+arr[maxIdx] = minNum
+arr[minIdx] = maxNum
+console.log(arr)
+// console.log(maxIdx)
+// console.log(minIdx)
+// console.log(maxNum)
+// console.log(minNum)
+
+// const arr = [10, 2, 2, 5, 7, 8, 4, 1, 0, -1]
+// const findIndex = (elem) => {
+//   let arr2 = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === elem) {
+//       arr2.push(i)
+//     }
+//   }
+//   if (arr2.length === 0) {
+//     return 'not found'
+//   } else if (arr2.length === 1) {
+//     return arr2[0]
+//   }
+//   return arr2
+// }
+// console.log(findIndex(2)) // 1
+// console.log(findIndex(7)) // 3
+// console.log(findIndex(50))
