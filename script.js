@@ -899,28 +899,27 @@
 // obj[str] = sum
 // console.log(obj)
 
-const arr = [2, 10, 5, 7, 8, 4, 1, 0, -1,100]
-let maxNum = arr[0]
-let minNum = arr[0]
-let maxIdx;
-let minIdx;
-for (i = 0; i < arr.length; i++) {
-  if (maxNum < arr[i]) {
-    maxNum = arr[i] // 2,10,100
-    maxIdx = i
-    //0,1,9
-  }
-}
-for (i = 0; i < arr.length; i++) {
-  if (minNum >= arr[i]) {
-    minNum = arr[i] //2, 1,0, -1
-    minIdx = i
+// const arr = [2, 10, 5, 7, 8, 4, 1, 0, -1, 100]
+// let maxNum = arr[0]
+// let minNum = arr[0]
+// let maxIdx;
+// let minIdx;
+// for (i = 0; i < arr.length; i++) {
+//   if (maxNum < arr[i]) {
+//     maxNum = arr[i] // 2,10,100
+//     maxIdx = i //0,1,9    
+//   }
+// }
+// for (i = 0; i < arr.length; i++) {
+//   if (minNum >= arr[i]) {
+//     minNum = arr[i] //2, 1,0, -1
+//     minIdx = i
+//   }
+// }
+// arr[maxIdx] = minNum
+// arr[minIdx] = maxNum
 
-  }
-}
-arr[maxIdx] = minNum
-arr[minIdx] = maxNum
-console.log(arr)
+// console.log(arr)
 // console.log(maxIdx)
 // console.log(minIdx)
 // console.log(maxNum)
@@ -944,3 +943,34 @@ console.log(arr)
 // console.log(findIndex(2)) // 1
 // console.log(findIndex(7)) // 3
 // console.log(findIndex(50))
+
+
+// const reversArr = (arr) => {
+//   let newArr = [];
+//   for (let i = arr.length - 1; i >= 0; i--) {
+//     newArr.push(arr[i])
+//   }
+//   return newArr
+// }
+// console.log(reversArr([4, 9, 12, 67, -7, 0]))
+
+// const reversArr = (arr) => {
+//   let newArr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     newArr.push(arr[arr.length - (i + 1)])
+//   }
+//   return newArr
+// }
+// console.log(reversArr([4, 9, 12, 67, -7, 0]))
+
+const inputArray = [4, 9, 12, 67, -7, 0]
+
+const sortArray = (arr) => {
+  for (let i=0; i<arr.length; i++) {
+    for (let j=0; j< arr[i]; j++) {
+      console.log(arr[i])
+    }
+  }
+}
+
+console.log(sortArray(inputArray)) // [-7, 0, 4, 9, 12, 67]
