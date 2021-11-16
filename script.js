@@ -926,25 +926,105 @@
 // }
 // console.log(reversArr([4, 9, 12, 67, -7, 0]))
 
-const inputArray = [4, 9, 12, 67, -7, 0];
+// const inputArray = [4, 9, 12, 67, -7, 0];
 
 // const res = inputArray.sort((a, b) => a - b);
 // console.log(res);
 
-const sortArray = (arr) => {
-  let a;
-  let b;
+// const sortArray = (arr) => {
+//   let a;
+//   let b;
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = 0; j < arr.length - 1; j++) {
+//       a = arr[j];
+//       b = arr[j + 1];
+//       if (a > b) {
+//         arr[j] = b;
+//         arr[j + 1] = a;
+//       }
+//     }
+//   }
+//   return arr;
+// };
+
+// console.log(sortArray(inputArray)); // [-7, 0, 4, 9, 12, 67]
+
+// const input = [
+//   {
+//     name: 'Ivan',
+//     age: 19
+//   },
+//   {
+//     name: 'Oleg',
+//     age: 17
+//   },
+//   {
+//     name: 'Petro',
+//     age: 40
+//   }
+// ]
+
+// const decider = (arr) => {
+
+//   for (let i = 0; i < arr.length; i++) {
+//     arr[i].alcohol = arr[i].age >= 21 ? 'yes' : 'no'
+//     // arr[i].age >= 21 ? arr[i].alcohol = 'yes' : arr[i].alcohol = 'no'
+//     arr[i].army = arr[i].age >= 18 ? 'yes' : 'no'
+//     // arr[i].age >= 18 ? arr[i].army = 'yes' : arr[i].army = 'no'
+//   }
+//   return arr
+// }
+
+// const input2 = decider(input)
+
+// const arrFilter = (arr, alco, army) => {
+//   const newArr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (alco === arr[i].alcohol && army === arr[i].army) {
+//       newArr.push(arr[i])
+//     }
+//   }
+//   return newArr
+// }
+
+// console.log(arrFilter(input2, 'no', 'yes')) // [{ name: 'Ivan', age: 19, alcohol: 'no', army: 'yes' }]
+// console.log(arrFilter(input2, 'no', 'no')) // [{ name: 'Oleg', age: 17, alcohol: 'no', army: 'no' }]
+// console.log(arrFilter(input2, 'yes', 'yes')) // [{ name: 'Petro', age: 40, alcohol: 'yes', army: 'yes' }]
+
+const input = [
+  {
+    label: 'ford',
+    speed: 170
+  },
+  {
+    label: 'ferrari',
+    speed: 260
+  },
+  {
+    label: 'mitsubishi',
+    speed: 190
+  },
+]
+
+const getStatus = (arr, car) => {
   for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr.length - 1; j++) {
-      a = arr[j];
-      b = arr[j + 1];
-      if (a > b) {
-        arr[j] = b;
-        arr[j + 1] = a;
+      if (arr[j].speed < arr[j + 1].speed) {
+        const tempItem = arr[j]
+        arr[j] = arr[j + 1]
+        arr[j + 1] = tempItem
       }
     }
   }
-  return arr;
-};
+  for (let i = 0; i < arr.length; i++) {
+    if (car === arr[i].label) {
+      return `its ${i + 1}`
+    }
+  }
+  return `nema`
+}
 
-console.log(sortArray(inputArray)); // [-7, 0, 4, 9, 12, 67]
+console.log(getStatus(input, 'ford')) // its 3
+console.log(getStatus(input, 'ferrari')) // its 1
+console.log(getStatus(input, 'mitsubishi')) // its 2
+console.log(getStatus(input, 'lanos')) // not found
