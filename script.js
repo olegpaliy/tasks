@@ -487,7 +487,7 @@
   * Сложность задачи: 3 of 5
   * @param {Array} array - Глубокий массив
   * @returns {Array}
-  * 
+  *
   * // const recFunc = (arr, index) => {
 // console.log(arr[index]);
 // if (index === arr.length - 1) return;
@@ -991,40 +991,73 @@
 // console.log(arrFilter(input2, 'no', 'no')) // [{ name: 'Oleg', age: 17, alcohol: 'no', army: 'no' }]
 // console.log(arrFilter(input2, 'yes', 'yes')) // [{ name: 'Petro', age: 40, alcohol: 'yes', army: 'yes' }]
 
-const input = [
-  {
-    label: 'ford',
-    speed: 170
-  },
-  {
-    label: 'ferrari',
-    speed: 260
-  },
-  {
-    label: 'mitsubishi',
-    speed: 190
-  },
-]
+// const input = [
+//   {
+//     label: 'ford',
+//     speed: 170
+//   },
+//   {
+//     label: 'ferrari',
+//     speed: 260
+//   },
+//   {
+//     label: 'mitsubishi',
+//     speed: 190
+//   },
+// ]
 
-const getStatus = (arr, car) => {
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr.length - 1; j++) {
-      if (arr[j].speed < arr[j + 1].speed) {
-        const tempItem = arr[j]
-        arr[j] = arr[j + 1]
-        arr[j + 1] = tempItem
-      }
-    }
-  }
-  for (let i = 0; i < arr.length; i++) {
-    if (car === arr[i].label) {
-      return `its ${i + 1}`
-    }
-  }
-  return `nema`
+// const getStatus = (arr, car) => {
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = 0; j < arr.length - 1; j++) {
+//       if (arr[j].speed < arr[j + 1].speed) {
+//         const tempItem = arr[j]
+//         arr[j] = arr[j + 1]
+//         arr[j + 1] = tempItem
+//       }
+//     }
+//   }
+//   for (let i = 0; i < arr.length; i++) {
+//     if (car === arr[i].label) {
+//       return `its ${i + 1}`
+//     }
+//   }
+//   return `nema`
+// }
+
+// console.log(getStatus(input, 'ford')) // its 3
+// console.log(getStatus(input, 'ferrari')) // its 1
+// console.log(getStatus(input, 'mitsubishi')) // its 2
+// console.log(getStatus(input, 'lanos')) // not found
+
+// const clock = () => {
+//   console.clear()
+
+//   let date1 = new Date()
+//   let hours = date1.getHours()
+//   let minutes = date1.getMinutes()
+//   let seconds = date1.getSeconds()
+//   return `${hours}:${minutes}:${seconds}`
+// }
+
+// setInterval(() => {
+//   console.log(clock())
+// }, 1000);
+
+const getAge = (dob) => {
+
+  let [day, month, year] = dob.split('/')
+
+
+  let curYear = new Date().getFullYear()
+
+  // let curMonth = new Date().getMonth()
+  // let curDay = new Date().getDay()
+
+
+  return `${curYear - year} year`
+
 }
 
-console.log(getStatus(input, 'ford')) // its 3
-console.log(getStatus(input, 'ferrari')) // its 1
-console.log(getStatus(input, 'mitsubishi')) // its 2
-console.log(getStatus(input, 'lanos')) // not found
+console.log(getAge('05/06/1996')) // 25 years, 5 months, 5 days, 6 hours, 32 minutes, 5 seconds
+console.log(getAge('05/12/1996')) // 25 years, 5 months, 5 days, 6 hours, 32 minutes, 5 seconds
+
