@@ -1043,21 +1043,41 @@
 //   console.log(clock())
 // }, 1000);
 
-const getAge = (dob) => {
+// const getAge = (dob) => {
+//   let [day, month, year] = dob.split('/')
+//   let curYear = new Date().getFullYear()
+//   let curMonth = new Date().getUTCMonth()
+//   let curDay = new Date().getUTCDate()
+//   console.log(curDay)
+//   if ((curMonth - month) < 1) {
+//     curYear = curYear - 1
+//     curMonth = 12 + curMonth
+//   }
+//   return `${curYear - year} year, ${curMonth - month} months, ${curDay - day} day`
+// }
+// console.log(getAge('15/04/1996')) // 25 years, 5 months, 5 days, 6 hours, 32 minutes, 5 seconds
+// console.log(getAge('05/12/1996')) // 25 years, 5 months, 5 days, 6 hours, 32 minutes, 5 seconds
+// console.log(getAge('6/09/1990')) // 25 years, 5 months, 5 days, 6 hours, 32 minutes, 5 seconds
 
-  let [day, month, year] = dob.split('/')
+// const vowleChange = (str) => {
 
+//   const arrStr = str.split('').reduce((acc, cur) => cur === 'e' || cur === 'i' ? acc : acc + cur, '')
+//   return arrStr
+// }
+// console.log(vowleChange('weight'))
+const arr = [{ str: 1, num: 'str' }, { num: 'test' }, { str: 543 }]
+// перевірити всі проперті обєкта на відповідність між назвою філди і типом велю і змінити на відповідне
+const changeArr = (arr1) => {
+  const newArr = []
+  for (let i = 0; i < arr1.length; i++) {
+    for (key in arr1[i]) {
+      // console.log(arr1[i][key])
+      console.log(key)
+      if (typeof arr1[i][key] === 'number') {
 
-  let curYear = new Date().getFullYear()
-
-  // let curMonth = new Date().getMonth()
-  // let curDay = new Date().getDay()
-
-
-  return `${curYear - year} year`
-
+      }
+    }
+  }
+  return newArr
 }
-
-console.log(getAge('05/06/1996')) // 25 years, 5 months, 5 days, 6 hours, 32 minutes, 5 seconds
-console.log(getAge('05/12/1996')) // 25 years, 5 months, 5 days, 6 hours, 32 minutes, 5 seconds
-
+console.log(changeArr(arr))
