@@ -1065,18 +1065,23 @@
 //   return arrStr
 // }
 // console.log(vowleChange('weight'))
-const arr = [{ str: 1, num: 'str' }, { num: 'test' }, { str: 543 }]
+const arr = [{ num: 245 }, { str: 1, num: 'str' }, { num: 'test' }, { str: 543 }]
 // перевірити всі проперті обєкта на відповідність між назвою філди і типом велю і змінити на відповідне
 const changeArr = (arr1) => {
   const newArr = []
   for (let i = 0; i < arr1.length; i++) {
+    const obj = {
+    }
     for (key in arr1[i]) {
-      // console.log(arr1[i][key])
-      console.log(key)
-      if (typeof arr1[i][key] === 'number') {
-
+      const valueType = typeof arr1[i][key];
+      const neededKey = valueType === 'string' ? 'str' : 'num'
+      if (key !== neededKey) {
+        obj[neededKey] = arr1[i][key];
+      } else {
+        obj[key] = arr1[i][key];
       }
     }
+    newArr.push(obj)
   }
   return newArr
 }
