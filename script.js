@@ -1087,14 +1087,84 @@
 // }
 // console.log(changeArr(arr))
 
-const persistence = (num) => {
-  let strNum;
-  let some
-  do {
-    strNum = num.toString().split('').reduce((acc, cur, index) => acc * +cur, 1)
-    some = strNum
-  }
-  while (some > 10)
-  return strNum
-}
-console.log(persistence(55))
+// const persistence = (num) => {
+//   let strNum;
+//   let some
+//   do {
+//     strNum = num.toString().split('').reduce((acc, cur, index) => acc * +cur, 1)
+//     some = strNum
+//   }
+//   while (some > 10)
+//   return strNum
+// }
+// console.log(persistence(55))
+
+// function findNb(m) {
+//   let n = 0
+//   let total = 0
+//   while (total < m) {
+//     n += 1
+//     total += n ** 3
+//   }
+//   return total === m ? n : -1
+// }
+// console.log(findNb(4183059834009))
+// console.log(findNb(467687654))
+// console.log(findNb(4565))
+
+// const addArr = (arr) => {
+//   let newArr = [];
+//   let vowels = ["а", "е", "і", "о", "у"];
+//   let lastLettersMan = ['кий', 'вич']
+//   for (let i = 0; i < arr.length; i++) {
+//     const lastLet = arr[i].name.slice(-1);
+//     const lastLetForMale = arr[i].name.slice(-3);
+//     const obj = {};
+//     for (key in arr[i]) {
+//       obj[key] = arr[i][key];
+//       if (vowels.includes(lastLet)) {
+//         obj.sex = "female";
+//       } else if (lastLettersMan.includes(lastLetForMale)) {
+//         obj.sex = "male";
+//       } else {
+//         obj.sex = "not recognized"
+//       }
+//     }
+//     newArr.push(obj);
+//   }
+//   return newArr;
+// };
+// console.log(
+//   addArr([
+//     { name: "Іван Васильович" },
+//     { name: "Магдилина Іванівна" },
+//     { name: "Петро Брецізький" },
+//     { name: "Марта Брезіцька" },
+//     { name: "Smith" }
+//   ])
+// );
+
+// .map(person => ({...person, Lover: Ksenia}))
+// console.log(addKsenia);
+
+const addArr = (arr) => {
+  let vowels = ["а", "е", "і", "о", "у"];
+  let lastLettersMan = ['кий', 'вич']
+  // const lastLetForFemale = arr[i].name.slice(-1);
+  // const lastLetForMale = arr[i].name.slice(-3);
+  const newArr = arr.map(item => {
+    if (vowels.include(item.name.slice(-1))) {
+
+    }
+
+    return newArr;
+  });
+  console.log(
+    addArr([
+      { name: "Іван Васильович" },
+      { name: "Магдилина Іванівна" },
+      { name: "Петро Брецізький" },
+      { name: "Марта Брезіцька" },
+      { name: "Smith" }
+    ])
+  );
