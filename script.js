@@ -1144,27 +1144,53 @@
 //   ])
 // );
 
-// .map(person => ({...person, Lover: Ksenia}))
-// console.log(addKsenia);
+// const addArr = (arr) => {
+//   const vowels = ["а", "е", "і", "о", "у"];
+//   const lastLettersMan = ["кий", "вич"];
+//   return arr.map((item) => {
+//     const lastLetForFemale = item.name.slice(-1);
+//     const lastLetForMale = item.name.slice(-3);
+//     if (vowels.includes(lastLetForFemale)) {
+//       return { ...item, sex: "Female" };
+//     } else if (lastLettersMan.includes(lastLetForMale)) {
+//       return { ...item, sex: "male" };
+//     } else {
+//       return { ...item, sex: "vono" };
+//     }
+//   });
+// };
+// console.log(
+//   addArr([
+//     { name: "Іван Васильович" },
+//     { name: "Магдилина Іванівна" },
+//     { name: "Петро Брецізький" },
+//     { name: "Марта Брезіцька" },
+//     { name: "Smith" },
+//   ])
+// );
 
 const addArr = (arr) => {
-  let vowels = ["а", "е", "і", "о", "у"];
-  let lastLettersMan = ['кий', 'вич']
-  // const lastLetForFemale = arr[i].name.slice(-1);
-  // const lastLetForMale = arr[i].name.slice(-3);
-  const newArr = arr.map(item => {
-    if (vowels.include(item.name.slice(-1))) {
-
+  const vowels = ["а", "е", "і", "о", "у"];
+  const lastLettersMan = ["кий", "вич"];
+  return arr.map((item) => {
+    console.log(item.name);
+    const lastLetForFemale = item.name.slice(-1);
+    const lastLetForMale = item.name.slice(-3);
+    if (vowels.includes(lastLetForFemale)) {
+      return { ...item, sex: "Female" };
+    } else if (lastLettersMan.includes(lastLetForMale)) {
+      return { ...item, sex: "male" };
+    } else {
+      return { ...item, sex: "vono" };
     }
-
-    return newArr;
   });
-  console.log(
-    addArr([
-      { name: "Іван Васильович" },
-      { name: "Магдилина Іванівна" },
-      { name: "Петро Брецізький" },
-      { name: "Марта Брезіцька" },
-      { name: "Smith" }
-    ])
-  );
+};
+console.log(
+  addArr([
+    { name: "Іван Васильович" },
+    { name: "Магдилина Іванівна" },
+    { name: "Петро Брецізький" },
+    { name: "Марта Брезіцька" },
+    { name: "Smith" },
+  ])
+);
