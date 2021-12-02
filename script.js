@@ -1065,16 +1065,15 @@
 //   return arrStr
 // }
 // console.log(vowleChange('weight'))
-// const arr = [{ num: 245 }, { str: 1, num: 'str' }, { num: 'test' }, { str: 543 }]
-// // перевірити всі проперті обєкта на відповідність між назвою філди і типом велю і змінити на відповідне
+const arr = [{ num: 245 }, { str: 1, num: 'str' }, { num: 'test' }, { str: 543 }]
+// перевірити всі проперті обєкта на відповідність між назвою філди і типом велю і змінити на відповідне
 // const changeArr = (arr1) => {
 //   const newArr = []
 //   for (let i = 0; i < arr1.length; i++) {
 //     const obj = {
 //     }
 //     for (key in arr1[i]) {
-//       const valueType = typeof arr1[i][key];
-//       const neededKey = valueType === 'string' ? 'str' : 'num'
+//       const neededKey = typeof arr1[i][key] === 'string' ? 'str' : 'num'
 //       if (key !== neededKey) {
 //         obj[neededKey] = arr1[i][key];
 //       } else {
@@ -1202,14 +1201,25 @@
 
 // function validatePIN(pin) {
 //   let numb = Number(pin);
-//   if (typeof numb === "NaN") {
-//     return false;
+//   console.log(numb)
+//   if (Number.isInteger(numb) && numb > 0 && (pin.length === 4 || pin.length === 6)) {
+//     return true;
+//   } else {
+//     return false
 //   }
 // }
-// console.log(validatePIN(".a141"));
+// console.log(validatePIN('.24455'))
 
-const numb = "a232";
-const numb2 = Number(numb);
-if (typeof numb2 !== "number") {
-  return true;
+const guys = [{ name: "Petro", gang: "nigga" }, { name: 'Ivan', gang: "norm" }, { name: 'Vitalik', gang: "nigga" }, { name: 'Kolya', gang: "norm" }];
+const newArr = []
+for (let i = 0; i < guys.length; i++) {
+  const obj = {}
+  for (key in guys[i]) {
+    obj[key] = guys[i][key]
+    if ()
+  }
+  newArr.push(obj)
 }
+console.log(newArr)
+
+// const res = [{ name: "Petro", gang: "nigga", brothers: [{ name: 'Vitalik' }] }, { name: 'Ivan', gang: "norm", brothers: [{ name: 'Kolya' }] }]
