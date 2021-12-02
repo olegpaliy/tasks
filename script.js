@@ -1088,16 +1088,18 @@
 // console.log(changeArr(arr))
 
 // const persistence = (num) => {
-//   let strNum;
-//   let some
-//   do {
-//     strNum = num.toString().split('').reduce((acc, cur, index) => acc * +cur, 1)
-//     some = strNum
+//   let count = 0;
+//   num = num.toString();
+//   while (num.length > 1) {
+//     count++;
+//     num = num
+//       .split("")
+//       .reduce((acc, cur) => acc * +cur, 1)
+//       .toString();
 //   }
-//   while (some > 10)
-//   return strNum
-// }
-// console.log(persistence(55))
+//   return count;
+// };
+// console.log(persistence(39));
 
 // function findNb(m) {
 //   let n = 0
@@ -1169,28 +1171,45 @@
 //   ])
 // );
 
-const addArr = (arr) => {
-  const vowels = ["а", "е", "і", "о", "у"];
-  const lastLettersMan = ["кий", "вич"];
-  return arr.map((item) => {
-    console.log(item.name);
-    const lastLetForFemale = item.name.slice(-1);
-    const lastLetForMale = item.name.slice(-3);
-    if (vowels.includes(lastLetForFemale)) {
-      return { ...item, sex: "Female" };
-    } else if (lastLettersMan.includes(lastLetForMale)) {
-      return { ...item, sex: "male" };
-    } else {
-      return { ...item, sex: "vono" };
-    }
-  });
-};
-console.log(
-  addArr([
-    { name: "Іван Васильович" },
-    { name: "Магдилина Іванівна" },
-    { name: "Петро Брецізький" },
-    { name: "Марта Брезіцька" },
-    { name: "Smith" },
-  ])
-);
+// const addArr = (arr) => arr.map((item) => ({ fullName: item.name }));
+// console.log(
+//   addArr([
+//     { name: "Іван Васильович" },
+//     { name: "Магдилина Іванівна" },
+//     { name: "Петро Брецізький" },
+//     { name: "Марта Брезіцька" },
+//     { name: "Smith" },
+//   ])
+// );
+
+// const addArr = (arr) => {
+//   const newArr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     const obj = { fullName: arr[i].name };
+//     newArr.push(obj);
+//   }
+//   return newArr;
+// };
+// console.log(
+//   addArr([
+//     { name: "Іван Васильович" },
+//     { name: "Магдилина Іванівна" },
+//     { name: "Петро Брецізький" },
+//     { name: "Марта Брезіцька" },
+//     { name: "Smith" },
+//   ])
+// );
+
+// function validatePIN(pin) {
+//   let numb = Number(pin);
+//   if (typeof numb === "NaN") {
+//     return false;
+//   }
+// }
+// console.log(validatePIN(".a141"));
+
+const numb = "a232";
+const numb2 = Number(numb);
+if (typeof numb2 !== "number") {
+  return true;
+}
