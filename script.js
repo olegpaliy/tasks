@@ -1210,16 +1210,58 @@ const arr = [{ num: 245 }, { str: 1, num: 'str' }, { num: 'test' }, { str: 543 }
 // }
 // console.log(validatePIN('.24455'))
 
-const guys = [{ name: "Petro", gang: "nigga" }, { name: 'Ivan', gang: "norm" }, { name: 'Vitalik', gang: "nigga" }, { name: 'Kolya', gang: "norm" }];
-const newArr = []
-for (let i = 0; i < guys.length; i++) {
-  const obj = {}
-  for (key in guys[i]) {
-    obj[key] = guys[i][key]
-    if ()
-  }
-  newArr.push(obj)
-}
-console.log(newArr)
+// const unique = (array) => array.filter((item, index)=> array.indexOf(item) === index)
+
+// const guys = [{ name: "Petro", gang: "nigga" }, { name: 'Ivan', gang: "norm" }, { name: 'Vitalik', gang: "nigga" }, { name: 'Kolya', gang: "norm" }];
+// const newArr = []
+// for (let i = 0; i < guys.length; i++) {
+//   const obj = {}
+//   for (key in guys[i]) {
+//     if (guys.indexOf(guys[i]) === 0 && guys[i].gang === 'nigga') {
+//       obj[key] = guys[i][key]
+
+//     }
+//     for (key in guys[i]) {
+//       if (guys.indexOf(guys[i]) === 1 && guys[i].gang === 'norm') {
+//         obj[key] = guys[i][key]
+//       }
+//     }
+//   }
+//   newArr.push(obj)
+// }
+// console.log(newArr)
 
 // const res = [{ name: "Petro", gang: "nigga", brothers: [{ name: 'Vitalik' }] }, { name: 'Ivan', gang: "norm", brothers: [{ name: 'Kolya' }] }]
+
+
+// function getSum(a, b) {
+//   let count = 0;
+//   if (a == b) return a;
+//   if (a < b) {
+//     for (; a <= b; a++) {
+//       count += a;
+//     }
+//   } else if (a > b) {
+//     for (; b <= a; b++) {
+//       count += b;
+//     }
+//   }
+//   return count;
+// }
+// console.log(getSum(0, -1))
+
+function sumTwoSmallestNumbers(numbers) {
+  let min = numbers[0];
+  let secondMin = numbers[1];
+  for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] < min) {
+      secondMin = min;
+      console.log(secondMin)
+      min = numbers[i];
+    } else if (numbers[i] < secondMin) {
+      secondMin = numbers[i];
+    }
+  }
+  return min + secondMin;
+}
+console.log(sumTwoSmallestNumbers([8, 7, 6, 5]));
