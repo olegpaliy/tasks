@@ -1064,8 +1064,13 @@
 //   const arrStr = str.split('').reduce((acc, cur) => cur === 'e' || cur === 'i' ? acc : acc + cur, '')
 //   return arrStr
 // }
-// console.log(vowleChange('weight'))
-const arr = [{ num: 245 }, { str: 1, num: 'str' }, { num: 'test' }, { str: 543 }]
+// // console.log(vowleChange('weight'))
+// const arr = [
+//   { num: 245 },
+//   { str: 1, num: "str" },
+//   { num: "test" },
+//   { str: 543 },
+// ];
 // перевірити всі проперті обєкта на відповідність між назвою філди і типом велю і змінити на відповідне
 // const changeArr = (arr1) => {
 //   const newArr = []
@@ -1233,7 +1238,6 @@ const arr = [{ num: 245 }, { str: 1, num: 'str' }, { num: 'test' }, { str: 543 }
 
 // const res = [{ name: "Petro", gang: "nigga", brothers: [{ name: 'Vitalik' }] }, { name: 'Ivan', gang: "norm", brothers: [{ name: 'Kolya' }] }]
 
-
 // function getSum(a, b) {
 //   let count = 0;
 //   if (a == b) return a;
@@ -1250,18 +1254,49 @@ const arr = [{ num: 245 }, { str: 1, num: 'str' }, { num: 'test' }, { str: 543 }
 // }
 // console.log(getSum(0, -1))
 
-function sumTwoSmallestNumbers(numbers) {
-  let min = numbers[0];
-  let secondMin = numbers[1];
-  for (let i = 1; i < numbers.length; i++) {
-    if (numbers[i] < min) {
-      secondMin = min;
-      console.log(secondMin)
-      min = numbers[i];
-    } else if (numbers[i] < secondMin) {
-      secondMin = numbers[i];
-    }
+// function sumTwoSmallestNumbers(numbers) {
+//   let min = numbers[0];
+//   let secondMin = numbers[1];
+//   for (let i = 1; i < numbers.length; i++) {
+//     if (numbers[i] < min) {
+//       secondMin = min;
+//       min = numbers[i];
+//       // console.log(min);
+//       console.log(secondMin);
+//     } else if (numbers[i] < secondMin) {
+//       secondMin = numbers[i];
+//     }
+//   }
+//   return min + secondMin;
+// }
+// console.log(sumTwoSmallestNumbers([8, 12, 6, 5, 9, 3]));
+
+// function minMax(arr) {
+//   const maxNum = Math.max(...arr);
+//   const minNum = Math.min(...arr);
+//   return [minNum, maxNum];
+// }
+// console.log(minMax([1, 2, 3, 4, 5]));
+
+// const addArr = (arr) => {
+//   const vowels = ["а", "е", "і", "о", "у"];
+//   const lastLettersMan = ["кий", "вич"];
+//   return arr.map((item) => {
+//     const lastLetForFemale = item.name.slice(-1);
+//     const lastLetForMale = item.name.slice(-3);
+//     if (vowels.includes(lastLetForFemale)) {
+//       return { ...item, sex: "Female" };
+//     } else if (lastLettersMan.includes(lastLetForMale)) {
+//       return { ...item, sex: "male" };
+//     } else {
+//       return { ...item, sex: "vono" };
+
+function solution(str, ending) {
+  const word = str.split("").slice(-3).join("");
+  if (word === ending) {
+    return true;
+  } else {
+    return false;
   }
-  return min + secondMin;
 }
-console.log(sumTwoSmallestNumbers([8, 7, 6, 5]));
+console.log(solution("abcde", "cde"));
