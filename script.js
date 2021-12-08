@@ -1217,24 +1217,23 @@
 
 // const unique = (array) => array.filter((item, index)=> array.indexOf(item) === index)
 
-// const guys = [{ name: "Petro", gang: "nigga" }, { name: 'Ivan', gang: "norm" }, { name: 'Vitalik', gang: "nigga" }, { name: 'Kolya', gang: "norm" }];
-// const newArr = []
-// for (let i = 0; i < guys.length; i++) {
-//   const obj = {}
-//   for (key in guys[i]) {
-//     if (guys.indexOf(guys[i]) === 0 && guys[i].gang === 'nigga') {
-//       obj[key] = guys[i][key]
+// const res = [{ name: "Petro", gang: "nigga", brothers: [{ name: 'Vitalik' }] }, { name: 'Ivan', gang: "norm", brothers: [{ name: 'Kolya' }] }]
+const guys = [{ name: "Petro", gang: "nigga" }, { name: 'Ivan', gang: "norm" }, { name: 'Vitalik', gang: "nigga" }, { name: 'Kolya', gang: "norm" }];
+const newArr = []
+for (let i = 0; i < guys.length; i++) {
+  const obj = {}
 
-//     }
-//     for (key in guys[i]) {
-//       if (guys.indexOf(guys[i]) === 1 && guys[i].gang === 'norm') {
-//         obj[key] = guys[i][key]
-//       }
-//     }
-//   }
-//   newArr.push(obj)
-// }
-// console.log(newArr)
+
+
+  if (guys[i].gang === 'nigga') {
+
+  }
+
+
+
+  newArr.push(obj)
+}
+console.log(newArr)
 
 // const res = [{ name: "Petro", gang: "nigga", brothers: [{ name: 'Vitalik' }] }, { name: 'Ivan', gang: "norm", brothers: [{ name: 'Kolya' }] }]
 
@@ -1262,7 +1261,7 @@
 //       secondMin = min;
 //       min = numbers[i];
 //       // console.log(min);
-//       console.log(secondMin);
+//       // console.log(secondMin);
 //     } else if (numbers[i] < secondMin) {
 //       secondMin = numbers[i];
 //     }
@@ -1278,25 +1277,11 @@
 // }
 // console.log(minMax([1, 2, 3, 4, 5]));
 
-// const addArr = (arr) => {
-//   const vowels = ["а", "е", "і", "о", "у"];
-//   const lastLettersMan = ["кий", "вич"];
-//   return arr.map((item) => {
-//     const lastLetForFemale = item.name.slice(-1);
-//     const lastLetForMale = item.name.slice(-3);
-//     if (vowels.includes(lastLetForFemale)) {
-//       return { ...item, sex: "Female" };
-//     } else if (lastLettersMan.includes(lastLetForMale)) {
-//       return { ...item, sex: "male" };
-//     } else {
-//       return { ...item, sex: "vono" };
+// function getMiddle(s) {
+//   const strArr = s.split('')
+//   for (let i = 0; i < strArr.length; i++) {
 
-function solution(str, ending) {
-  const word = str.split("").slice(-3).join("");
-  if (word === ending) {
-    return true;
-  } else {
-    return false;
-  }
-}
-console.log(solution("abcde", "cde"));
+//   }
+// }
+// console.log(getMiddle('middle'))
+
