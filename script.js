@@ -1220,20 +1220,34 @@
 // const res = [{ name: "Petro", gang: "nigga", brothers: [{ name: 'Vitalik' }] }, { name: 'Ivan', gang: "norm", brothers: [{ name: 'Kolya' }] }]
 const guys = [{ name: "Petro", gang: "nigga" }, { name: 'Ivan', gang: "norm" }, { name: 'Vitalik', gang: "nigga" }, { name: 'Kolya', gang: "norm" }];
 const newArr = []
+const newArr2 = []
+const mainArr = []
 for (let i = 0; i < guys.length; i++) {
-  const obj = {}
-
-
-
   if (guys[i].gang === 'nigga') {
-
+    newArr.push(guys[i])
   }
-
-
-
-  newArr.push(obj)
+  if (guys[i].gang === 'norm') {
+    newArr2.push(guys[i])
+  }
 }
-console.log(newArr)
+newArr[0].brothers = []
+for (let j = 1; j < newArr.length; j++) {
+  if (newArr[j]) {
+    newArr[0].brothers.push(newArr[j])
+  }
+}
+newArr2[0].brothers = []
+for (let k = 1; k < newArr2.length; k++) {
+  if (newArr2[k]) {
+    newArr2[0].brothers.push(newArr2[k])
+  }
+}
+const otherEl = newArr[0]
+const otherEl2 = newArr2[0]
+
+console.log(JSON.stringify(otherEl, null, 2))
+console.log(JSON.stringify(otherEl2, null, 2))
+
 
 // const res = [{ name: "Petro", gang: "nigga", brothers: [{ name: 'Vitalik' }] }, { name: 'Ivan', gang: "norm", brothers: [{ name: 'Kolya' }] }]
 
